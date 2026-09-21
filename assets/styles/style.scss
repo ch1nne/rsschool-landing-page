@@ -99,3 +99,34 @@ h1, h2, h3 {
   line-height: $lh-medium;
   color: $color-text-primary;
 }
+
+.about {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__text {
+  font-size: $fs-heading-2;
+  font-weight: $fw-semibold;
+  line-height: $lh-heading-2;
+  color: $color-text-primary;
+}
+.about__text-accent {
+  color: $color-text-accent;
+  font-style: italic;
+}
+.about__gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.about__column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about__image {
+  border-radius: 20px;
+  width: 100%;
+}
