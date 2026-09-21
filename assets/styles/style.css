@@ -1,4 +1,27 @@
-* {
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/static/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/static/Inter_18pt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -6,6 +29,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #E1D4C9;
+  color: #403F3D;
+  font-family: "Inter", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
