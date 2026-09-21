@@ -23,7 +23,9 @@ ul {
 a {
   text-decoration: none;
 }
-
+h1, h2, h3 {
+  margin: 0;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,4 +59,43 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+}
+
+.hero {
+  background-image: url("/assets/img/Background.png");
+  background-size: cover;
+  border-radius: 40px;
+  margin: 0 40px;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 100px;
+  width: 730px;
+}
+.hero__title {
+  font-size: $fs-heading-1;
+  font-weight: $fw-semibold;
+  line-height: $lh-heading-1;
+  color: $color-text-inverse;
+}
+.hero__title-accent {
+  color: $color-text-accent;
+  font-style: italic;
+}
+.hero__description {
+  font-size: $fs-medium;
+  font-weight: $fw-regular;
+  line-height: $lh-medium;
+  color: $color-text-inverse;
+}
+.hero__button {
+  background-color: $color-bg-page;
+  padding: 20px 78px;
+  border-radius: 100px;
+  font-size: $fs-medium;
+  font-weight: $fw-semibold;
+  line-height: $lh-medium;
+  color: $color-text-primary;
 }
