@@ -59,7 +59,6 @@ p {
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
-  color: #403F3D;
 }
 
 .heading-2-accent {
@@ -81,7 +80,7 @@ p {
   color: #403F3D;
 }
 
-header, section {
+header, section, footer {
   max-width: 1360px;
   width: 100%;
 }
@@ -197,10 +196,34 @@ header, section {
   object-fit: none;
 }
 
+.download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .download__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: solid 1px #403F3D;
+  border-radius: 100px;
+  width: 200px;
+}
+
+.download__link-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .download__description {
@@ -210,17 +233,76 @@ header, section {
   color: #403F3D;
 }
 
-.download {
-  display: flex;
-  justify-content: space-between;
-}
-
 .download__content {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 630px;
   width: 100%;
+}
+
+.footer {
+  background-color: #665F55;
+  color: #E1D4C9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 40px;
+  padding: 100px;
+  gap: 100px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  width: 100%;
+}
+
+.footer__slogan {
+  margin: 40px 0;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+  max-width: 204px;
+  width: 100%;
+}
+
+.footer__social-link {
+  border: solid 1px #C1B6AD;
+  border-radius: 100px;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.footer__contacts-title {
+  margin-bottom: 40px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__contacts-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.footer__contacts-link {
+  color: #E1D4C9;
 }
 
 /*# sourceMappingURL=style.css.map */
