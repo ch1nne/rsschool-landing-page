@@ -56,8 +56,69 @@
     </div>
 </section>
 
-<!--потом сделаю-->
-<!--<section>slider</section>-->
+<section class="slider">
+    <div class="slider__header">
+        <h2 class="heading-2">
+            Choose your <span class="heading-2-accent">favorite</span> coffee
+        </h2>
+    </div>
+
+    <div class="slider__body">
+        <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Previous slide">
+            <img src="assets/img/icon/left.svg" alt="" />
+        </button>
+
+        <div class="slider__viewport">
+            <div class="slider__track">
+                <div class="slider__slide">
+                    <img class="slider__image" src="assets/img/coffee-slider-1.png" alt="S'mores Frappuccino" />
+                    <div class="slider__info">
+                        <span class="slider__name">S'mores Frappuccino</span>
+                        <p class="slider__description">
+                            This new drink takes an espresso and mixes it with brown
+                            sugar and cinnamon before being topped with oat milk.
+                        </p>
+                        <span class="slider__price">$5.50</span>
+                    </div>
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__image" src="assets/img/coffee-slider-2.png" alt="Caramel Macchiato" />
+                    <div class="slider__info">
+                        <span class="slider__name">Caramel Macchiato</span>
+                        <p class="slider__description">
+                            Fragrant and unique classic espresso with rich caramel-peanut
+                            <br>syrup, with cream under whipped thick foam.
+                        </p>
+                        <span class="slider__price">$5.00</span>
+                    </div>
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__image" src="assets/img/coffee-slider-3.png" alt="Irish coffee" />
+                    <div class="slider__info">
+                        <span class="slider__name">Ice coffee</span>
+                        <p class="slider__description">
+                            A popular summer drink that tones and invigorates. Prepared
+                            <br>from coffee, milk and ice.
+                        </p>
+                        <span class="slider__price">$4.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="slider__arrow slider__arrow--next" type="button" aria-label="Next slide">
+            <img src="assets/img/icon/right.svg" alt="" />
+        </button>
+    </div>
+
+    <div class="slider__dots">
+        <button class="slider__dot slider__dot--active" type="button" aria-label="Slide 1"></button>
+        <button class="slider__dot" type="button" aria-label="Slide 2"></button>
+        <button class="slider__dot" type="button" aria-label="Slide 3"></button>
+    </div>
+</section>
 
 <section class="about">
     <h2 class="about__text heading-2">
@@ -113,7 +174,7 @@
 </section>
 
 <footer class="footer">
-    <div class="footer__top footer-container">
+    <div class="footer__top">
         <p class="footer__slogan heading-2">
             Sip, Savor, Smile.
             <span class="footer__slogan-accent heading-2-accent">It’s coffee time!</span>
