@@ -375,4 +375,58 @@ header, section, footer {
   background: #665F55;
 }
 
+.surprise {
+  display: flex;
+  justify-content: center;
+}
+
+.menu__categories {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+.menu__category {
+  background: none;
+  border: 1px solid #C1B6AD;
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #403F3D;
+}
+.menu__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+.menu__card {
+  display: flex;
+  flex-direction: column;
+  max-width: 310px;
+  align-items: flex-start;
+  gap: 20px;
+  border: solid 1px #C1B6AD;
+  border-radius: 40px;
+}
+.menu__card-image {
+  max-width: 310px;
+  width: 100%;
+  border-radius: 40px;
+}
+.menu__card-info {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__card-name, .menu__card-price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
 /*# sourceMappingURL=style.css.map */

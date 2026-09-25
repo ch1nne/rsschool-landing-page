@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <title>landing-page</title>
+</head>
+<body>
+<header class="header">
+    <div class="header__logo">
+        <img src="/assets/img/icon/logo.svg" alt="Logo" />
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <a class="header__link" href="#">Favorite coffee</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__link" href="#">About</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__link" href="#">Mobile app</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__link" href="#">Contact us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header__actions">
+        <button class="header__theme-toggle" type="button">
+            <img src="/assets/img/icon/moon.svg" alt="" />
+        </button>
+        <a class="header__menu-link" href="#">
+            <span class="header__link">Menu</span>
+            <img class="header__menu-icon" src="/assets/img/icon/coffee.svg" alt="icon" />
+        </a>
+    </div>
+</header>
+
+
+<section class="surprise">
+    <div class="surprise__header">
+        <h2 class="heading-2">
+            Behind each of our cups <br>
+            hides an <span class="heading-2-accent">amazing surprise</span>
+        </h2>
+    </div>
+</section>
+
+<section class="menu">
+    <div class="menu__categories">
+        <button class="menu__category menu__category--active" type="button" data-category="coffee">Coffee</button>
+        <button class="menu__category" type="button" data-category="tea">Tea</button>
+        <button class="menu__category" type="button" data-category="dessert">Dessert</button>
+    </div>
+
+    <div class="menu__cards" id="menu-cards"></div>
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer__top">
+        <p class="footer__slogan heading-2">
+            Sip, Savor, Smile.
+            <span class="footer__slogan-accent heading-2-accent">It’s coffee time!</span>
+        </p>
+
+        <div class="footer__socials">
+            <a class="footer__social-link" href="#" aria-label="Twitter">
+                <img class="footer__social-icon" src="/assets/img/icon/tw.svg" alt="icon" />
+            </a>
+            <a class="footer__social-link" href="#" aria-label="Instagram">
+                <img class="footer__social-icon" src="/assets/img/icon/inst.svg" alt="icon" />
+            </a>
+            <a class="footer__social-link" href="#" aria-label="Facebook">
+                <img class="footer__social-icon" src="/assets/img/icon/fc.svg" alt="icon"/>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer__contacts">
+        <span class="footer__contacts-title">Contact us</span>
+
+        <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+                <img class="footer__contacts-icon" src="/assets/img/icon/link-item.svg" alt="" />
+                <a class="footer__contacts-link" href="#">8558 Green Rd., LA</a>
+            </li>
+            <li class="footer__contacts-item">
+                <img class="footer__contacts-icon" src="/assets/img/icon/phone.svg" alt="" />
+                <a class="footer__contacts-link" href="tel:+16035550123">+1 (603) 555-0123</a>
+            </li>
+            <li class="footer__contacts-item">
+                <img class="footer__contacts-icon" src="/assets/img/icon/clock.svg" alt="" />
+                <span class="footer__contacts-link">Mon–Sat: 9:00–23:00</span>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script type="module" src="/assets/main.js"></script>
+</body>
+</html>
