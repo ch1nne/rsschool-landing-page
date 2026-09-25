@@ -421,6 +421,11 @@ header, section, footer {
     font-weight: $fw-semibold;
     line-height: $lh-medium;
     color: $color-text-primary;
+
+    &--active {
+      background: $color-border-inverse;
+      color: $color-text-inverse;
+    }
   }
 
   &__cards {

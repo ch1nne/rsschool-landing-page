@@ -396,6 +396,10 @@ header, section, footer {
   line-height: 150%;
   color: #403F3D;
 }
+.menu__category--active {
+  background: #665F55;
+  color: #E1D4C9;
+}
 .menu__cards {
   display: flex;
   justify-content: space-between;

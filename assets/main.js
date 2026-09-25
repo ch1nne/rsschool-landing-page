@@ -96,6 +96,90 @@ const products = [
         description: 'Fragrant black coffee with cognac and whipped cream',
         price: '6.50',
     },
+    {
+        category: 'tea',
+        image: '/assets/img/menu/tea/tea-1.png',
+        name: 'Moroccan',
+        description: 'Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint',
+        price: '4.50',
+    },
+    {
+        category: 'tea',
+        image: '/assets/img/menu/tea/tea-2.png',
+        name: 'Ginger',
+        description: 'Original black tea with fresh ginger, lemon and honey',
+        price: '5.00',
+    },
+    {
+        category: 'tea',
+        image: '/assets/img/menu/tea/tea-3.png',
+        name: 'Cranberry',
+        description: 'Invigorating black tea with cranberry and honey',
+        price: '5.00',
+    },
+    {
+        category: 'tea',
+        image: '/assets/img/menu/tea/tea-4.png',
+        name: 'Sea buckthorn',
+        description: 'Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon',
+        price: '5.50',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-1.png',
+        name: 'Marble cheesecake',
+        description: 'Philadelphia cheese with lemon zest on a light sponge cake and red currant jam',
+        price: '3.50',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-2.png',
+        name: 'Red velvet',
+        description: 'Layer cake with cream cheese frosting',
+        price: '4.00',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-3.png',
+        name: 'Cheesecakes',
+        description: 'Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar',
+        price: '4.50',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-4.png',
+        name: 'Creme brulee',
+        description: 'Delicate creamy dessert in a caramel basket with wild berries',
+        price: '4.00',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-5.png',
+        name: 'Pancakes',
+        description: 'Tender pancakes with strawberry jam and fresh strawberries',
+        price: '4.50',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-6.png',
+        name: 'Honey cake',
+        description: 'Classic honey cake with delicate custard',
+        price: '4.50',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-7.png',
+        name: 'Chocolate cake',
+        description: 'Cake with hot chocolate filling and nuts with dried apricots',
+        price: '5.50',
+    },
+    {
+        category: 'dessert',
+        image: '/assets/img/menu/dessert/dessert-7.png',
+        name: 'Black forest',
+        description: 'A combination of thin sponge cake with cherry jam and light chocolate mousse',
+        price: '6.50',
+    },
 ];
 
 const cardTemplate = (product) => `
@@ -115,5 +199,16 @@ function renderCards(category) {
     const filtered = products.filter((p) => p.category === category);
     cardsContainer.innerHTML = filtered.map(cardTemplate).join('');
 }
+
+const categoryButtons = document.querySelectorAll('.menu__category');
+
+function updateCategory(activeButton) {
+    categoryButtons.forEach((btn) => btn.classList.remove('menu__category--active'));
+    activeButton.classList.add('menu__category--active');
+    renderCards(activeButton.dataset.category);
+}
+categoryButtons.forEach((btn) => {
+    btn.addEventListener('click', () => updateCategory(btn));
+});
 
 renderCards('coffee');
