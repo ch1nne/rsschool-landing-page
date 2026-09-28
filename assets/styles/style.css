@@ -60,6 +60,11 @@ p {
   font-weight: 600;
   line-height: 125%;
 }
+@media (max-width: 688px) {
+  .heading-2 {
+    font-size: 32px;
+  }
+}
 
 .heading-2-accent {
   color: #B0907A;
@@ -83,6 +88,16 @@ p {
 header, section, footer {
   max-width: 1360px;
   width: 100%;
+}
+@media (max-width: 1360px) {
+  header, section, footer {
+    max-width: 688px;
+  }
+}
+@media (max-width: 688px) {
+  header, section, footer {
+    max-width: 348px;
+  }
 }
 
 .header {
@@ -232,6 +247,16 @@ header, section, footer {
   padding: 100px;
   gap: 100px;
 }
+@media (max-width: 1360px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1360px) and (max-width: 1360px) {
+  .footer {
+    max-width: 688px;
+  }
+}
 .footer__content {
   display: flex;
   flex-direction: column;
@@ -378,6 +403,11 @@ header, section, footer {
 .surprise {
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+.surprise__header {
+  max-width: 800px;
+  width: 100%;
 }
 
 .menu__categories {
@@ -402,7 +432,7 @@ header, section, footer {
 }
 .menu__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 100px;
@@ -496,11 +526,16 @@ header, section, footer {
   font-weight: 400;
   line-height: 150%;
 }
+.modal__checkbox {
+  margin: 0;
+}
 .modal__sizes {
   display: flex;
   gap: 8px;
 }
 .modal__size {
+  display: flex;
+  align-items: center;
   background: none;
   border: 1px solid #C1B6AD;
   border-radius: 100px;
@@ -511,11 +546,15 @@ header, section, footer {
   color: #403F3D;
 }
 .modal__size-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #C1B6AD;
   padding: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  margin-right: 8px;
 }
 .modal__size--active {
   background: #665F55;
@@ -527,7 +566,6 @@ header, section, footer {
 .modal__additive {
   display: flex;
   align-items: center;
-  gap: 8px;
   background: none;
   border: 1px solid #C1B6AD;
   border-radius: 100px;

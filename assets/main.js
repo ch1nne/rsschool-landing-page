@@ -270,7 +270,7 @@ const products = [
     },
     {
         category: 'dessert',
-        image: '/assets/img/menu/dessert/dessert-7.png',
+        image: '/assets/img/menu/dessert/dessert-8.png',
         name: 'Black forest',
         description: 'A combination of thin sponge cake with cherry jam and light chocolate mousse',
         price: '6.50',
@@ -336,12 +336,13 @@ function renderAdditives(additives) {
     modalAdditives.innerHTML = additives.map((additive) => `
         <label class="modal__additive">
             <input
+                class="modal__checkbox"
                 type="checkbox"
                 data-additive="${additive.id}"
                 data-price="${additive.price}"
                 value="${additive.id}"
             />
-            <span>${additive.id}</span> ${additive.name}
+            <span class="modal__size-label">${additive.id}</span> ${additive.name}
         </label>
     `).join('');
 }
@@ -407,8 +408,10 @@ sizeButtons.forEach((btn) => {
     });
 });
 
-additiveInputs.forEach((input) => {
-    input.addEventListener('change', updateTotal);
+modalAdditives.addEventListener('change', (e) => {
+    if (e.target.matches('[data-additive]')) {
+        updateTotal();
+    }
 });
 
 modal.querySelectorAll('[data-close]').forEach((el) => {

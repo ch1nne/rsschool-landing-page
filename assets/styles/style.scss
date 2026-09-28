@@ -38,6 +38,11 @@ p {
   font-size: $fs-heading-2;
   font-weight: $fw-semibold;
   line-height: $lh-heading-2;
+
+  @media (max-width: 688px) {
+    font-size: $fs-burger-link;
+  }
+
 }
 .heading-2-accent {
   color: $color-text-accent;
@@ -59,6 +64,15 @@ p {
 header, section, footer {
   max-width: 1360px;
   width: 100%;
+
+  @media (max-width: 1360px) {
+    max-width: 688px;
+  }
+
+  @media (max-width: 688px) {
+    max-width: 348px;
+  }
+
 }
 .header {
   display: flex;
@@ -226,6 +240,14 @@ header, section, footer {
   border-radius: 40px;
   padding: 100px;
   gap: 100px;
+
+  @media (max-width: 1360px) {
+   flex-wrap: wrap;  @media (max-width: 1360px) {
+    max-width: 688px;
+  }
+
+  }
+
 
   &__content {
     display: flex;
@@ -400,6 +422,12 @@ header, section, footer {
 .surprise {
   display: flex;
   justify-content: center;
+  text-align: center;
+
+  &__header {
+    max-width: 800px;
+    width: 100%;
+  }
 }
 
 .menu {
@@ -430,7 +458,7 @@ header, section, footer {
 
   &__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 100px;
@@ -538,12 +566,18 @@ header, section, footer {
     line-height: $lh-medium;
   }
 
+  &__checkbox {
+    margin: 0;
+  }
+
   &__sizes {
     display: flex;
     gap: 8px;
   }
 
   &__size {
+    display: flex;
+    align-items: center;
     background: none;
     border: 1px solid $color-border-primary;
     border-radius: 100px;
@@ -554,11 +588,16 @@ header, section, footer {
     color: $color-text-primary;
 
     &-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: $color-border-primary;
       padding: 8px;
       width: 30px;
       height: 30px;
       border-radius: 50%;
+      margin-right: 8px;
+
     }
 
     &--active {
@@ -574,7 +613,6 @@ header, section, footer {
   &__additive {
     display: flex;
     align-items: center;
-    gap: 8px;
     background: none;
     border: 1px solid #C1B6AD;
     border-radius: 100px;
