@@ -212,3 +212,95 @@ categoryButtons.forEach((btn) => {
 });
 
 renderCards('coffee');
+
+const modal = document.getElementById('modal');
+const modalImage = modal.querySelector('.modal__image');
+const modalName = modal.querySelector('.modal__name');
+const modalDescription = modal.querySelector('.modal__description');
+const modalTotalPrice = modal.querySelector('.modal__total-price');
+const sizeButtons = modal.querySelectorAll('.modal__size');
+const additiveInputs = modal.querySelectorAll('[data-additive]');
+
+let currentProduct = null;
+
+const SIZES_PRICE = { S: 0, M: 0.5, L: 1 };
+const ADDITIVES_PRICE = { 1: 0.5, 2: 1 };
+
+function calculateTotal() {
+    if (!currentProduct) return 0;
+
+    const basePrice = parseFloat(currentProduct.price);
+    const activeSize = modal.querySelector('.modal__size--active');
+    const sizePrice = activeSize ? SIZES_PRICE[activeSize.dataset.size] : 0;
+
+    let additivesPrice = 0;
+    additiveInputs.forEach((input) => {
+        if (input.checked) {
+            additivesPrice += ADDITIVES_PRICE[input.dataset.additive];
+        }
+    });
+
+    return basePrice + sizePrice + additivesPrice;
+}
+
+function updateTotal() {
+    modalTotalPrice.textContent = `$${calculateTotal().toFixed(2)}`;
+}
+
+function openModal(product) {
+    currentProduct = product;
+
+    modalImage.src = product.image;
+    modalImage.alt = product.name;
+    modalName.textContent = product.name;
+    modalDescription.textContent = product.description;
+
+    sizeButtons.forEach((btn) => {
+        btn.classList.toggle('modal__size--active', btn.dataset.size === 'S');
+    });
+
+    additiveInputs.forEach((input) => {
+        input.checked = false;
+    });
+
+    updateTotal();
+    modal.classList.add('modal--open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modal.classList.remove('modal--open');
+    document.body.style.overflow = '';
+    currentProduct = null;
+}
+
+cardsContainer.addEventListener('click', (e) => {
+    const card = e.target.closest('.menu__card');
+    if (!card) return;
+
+    const productName = card.querySelector('.menu__card-name').textContent;
+    const product = products.find((p) => p.name === productName);
+    if (product) openModal(product);
+});
+
+sizeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        sizeButtons.forEach((b) => b.classList.remove('modal__size--active'));
+        btn.classList.add('modal__size--active');
+        updateTotal();
+    });
+});
+
+additiveInputs.forEach((input) => {
+    input.addEventListener('change', updateTotal);
+});
+
+modal.querySelectorAll('[data-close]').forEach((el) => {
+    el.addEventListener('click', closeModal);
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('modal--open')) {
+        closeModal();
+    }
+});

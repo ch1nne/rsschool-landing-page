@@ -465,3 +465,114 @@ header, section, footer {
     line-height: $lh-heading-2;
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  &--open {
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(64, 63, 61, 0.8);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    background: $color-bg-page;
+    border-radius: 40px;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  &__image {
+    width: 310px;
+    height: 310px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: $fs-heading-3;
+    font-weight: $fw-semibold;
+  }
+
+  &__description {
+    margin: 0;
+    font-family: $font-body;
+    font-size: $fs-medium;
+    line-height: $lh-medium;
+  }
+
+  &__sizes {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-border-primary;
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    font-family: $font-body;
+    font-size: $fs-medium;
+    font-weight: $fw-semibold;
+    transition: background 0.3s, color 0.3s;
+
+    &--active {
+      background: $color-bg-container;
+      color: $color-text-inverse;
+    }
+  }
+
+  &__additives {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__additive {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  &__total {
+    margin-top: auto;
+    font-size: $fs-heading-3;
+    font-weight: $fw-semibold;
+  }
+}

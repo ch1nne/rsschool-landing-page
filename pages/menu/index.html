@@ -62,7 +62,38 @@
     <div class="menu__cards" id="menu-cards"></div>
 </section>
 
+<div class="modal" id="modal">
+    <div class="modal__overlay" data-close></div>
 
+    <div class="modal__content">
+        <button class="modal__close" type="button" aria-label="Close" data-close>×</button>
+
+        <img class="modal__image menu__card-image"  src="" alt="" />
+
+        <div class="modal__info">
+            <h3 class="modal__name"></h3>
+            <p class="modal__description"></p>
+            <div class="modal__sizes">
+                <button class="modal__size modal__size--active" type="button" data-size="S">S</button>
+                <button class="modal__size" type="button" data-size="M">M</button>
+                <button class="modal__size" type="button" data-size="L">L</button>
+            </div>
+            <div class="modal__additives">
+                <label class="modal__additive">
+                    <input type="checkbox" data-additive="1" value="1" />
+                    <span>Add syrup +$0.50</span>
+                </label>
+                <label class="modal__additive">
+                    <input type="checkbox" data-additive="2" value="2" />
+                    <span>Add ice cream +$1.00</span>
+                </label>
+            </div>
+            <div class="modal__total">
+                Total: <span class="modal__total-price">$0.00</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer__top">
