@@ -460,12 +460,13 @@ header, section, footer {
   gap: 40px;
 }
 .modal__close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  padding: 10px;
   background: none;
-  border: none;
-  font-size: 30px;
+  border: 1px solid #665F55;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
   cursor: pointer;
 }
 .modal__image {
@@ -484,10 +485,15 @@ header, section, footer {
   font-size: 24px;
   font-weight: 600;
 }
+.modal__group-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
 .modal__description {
   margin: 0;
-  font-family: "Inter", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 150%;
 }
 .modal__sizes {
@@ -495,39 +501,63 @@ header, section, footer {
   gap: 8px;
 }
 .modal__size {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  background: none;
   border: 1px solid #C1B6AD;
   border-radius: 100px;
-  background: transparent;
-  cursor: pointer;
-  font-family: "Inter", sans-serif;
+  padding: 8px;
   font-size: 16px;
   font-weight: 600;
-  transition: background 0.3s, color 0.3s;
+  line-height: 150%;
+  color: #403F3D;
+}
+.modal__size-label {
+  background-color: #C1B6AD;
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 .modal__size--active {
   background: #665F55;
-  color: #E1D4C9;
 }
 .modal__additives {
   display: flex;
-  flex-direction: column;
   gap: 8px;
 }
 .modal__additive {
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
+  background: none;
+  border: 1px solid #C1B6AD;
+  border-radius: 100px;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #403F3D;
+}
+.modal__additive:has(input[type=checkbox]:checked) {
+  background: #665F55;
+  color: #E1D4C9;
+}
+.modal__additive input[type=checkbox] {
+  appearance: none;
 }
 .modal__total {
   margin-top: auto;
   font-size: 24px;
   font-weight: 600;
+}
+.modal__warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.modal__warning-text {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -496,12 +496,13 @@ header, section, footer {
   }
 
   &__close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    padding: 10px;
     background: none;
-    border: none;
-    font-size: 30px;
+    border: 1px solid $color-border-inverse;
+    border-radius: 100px;
+    font-size: $fs-medium;
+    font-weight: $fw-semibold;
+    line-height: $lh-medium;
     cursor: pointer;
   }
 
@@ -524,10 +525,16 @@ header, section, footer {
     font-weight: $fw-semibold;
   }
 
+  &__group-title {
+    font-size: $fs-medium;
+    font-weight: $fw-regular;
+    line-height: $lh-medium;
+  }
+
   &__description {
     margin: 0;
-    font-family: $font-body;
     font-size: $fs-medium;
+    font-weight: $fw-regular;
     line-height: $lh-medium;
   }
 
@@ -537,29 +544,30 @@ header, section, footer {
   }
 
   &__size {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    background: none;
     border: 1px solid $color-border-primary;
     border-radius: 100px;
-    background: transparent;
-    cursor: pointer;
-    font-family: $font-body;
+    padding: 8px;
     font-size: $fs-medium;
     font-weight: $fw-semibold;
-    transition: background 0.3s, color 0.3s;
+    line-height: $lh-medium;
+    color: $color-text-primary;
+
+    &-label {
+      background-color: $color-border-primary;
+      padding: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
 
     &--active {
       background: $color-bg-container;
-      color: $color-text-inverse;
     }
   }
 
   &__additives {
     display: flex;
-    flex-direction: column;
     gap: 8px;
   }
 
@@ -567,12 +575,40 @@ header, section, footer {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
+    background: none;
+    border: 1px solid #C1B6AD;
+    border-radius: 100px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #403F3D;
+
+    &:has(input[type='checkbox']:checked) {
+      background: $color-bg-container;
+      color: $color-text-inverse;
+    }
+
+    input[type='checkbox'] {
+      appearance: none;
+    }
   }
 
   &__total {
     margin-top: auto;
     font-size: $fs-heading-3;
     font-weight: $fw-semibold;
+  }
+
+  &__warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    &-text {
+      font-size: $fs-caption;
+      font-weight: $fw-semibold;
+      line-height: $lh-caption;
+    }
   }
 }

@@ -224,7 +224,7 @@ const additiveInputs = modal.querySelectorAll('[data-additive]');
 let currentProduct = null;
 
 const SIZES_PRICE = { S: 0, M: 0.5, L: 1 };
-const ADDITIVES_PRICE = { 1: 0.5, 2: 1 };
+const ADDITIVES_PRICE = { 1: 0, 2: 0, 3: 0.5};
 
 function calculateTotal() {
     if (!currentProduct) return 0;
