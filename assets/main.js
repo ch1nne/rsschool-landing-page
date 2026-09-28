@@ -46,6 +46,11 @@ const products = [
         name: 'Irish coffee',
         description: 'Fragrant black coffee with Jameson Irish whiskey and whipped milk',
         price: '7.00',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -53,6 +58,11 @@ const products = [
         name: 'Kahlua coffee',
         description: 'Classic coffee with milk and Kahlua liqueur under a cap of frothed milk',
         price: '7.00',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -60,6 +70,11 @@ const products = [
         name: 'Honey raf',
         description: 'Espresso with frothed milk, cream and aromatic honey',
         price: '5.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -67,6 +82,11 @@ const products = [
         name: 'Ice cappuccino',
         description: 'Cappuccino with soft thick foam in summer version with ice',
         price: '5.00',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -74,6 +94,11 @@ const products = [
         name: 'Espresso',
         description: 'Classic black coffee',
         price: '4.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -81,6 +106,11 @@ const products = [
         name: 'Latte',
         description: 'Espresso coffee with the addition of steamed milk and dense milk foam',
         price: '5.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -88,6 +118,11 @@ const products = [
         name: 'Latte macchiato',
         description: 'Espresso with frothed milk and chocolate',
         price: '5.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'coffee',
@@ -95,6 +130,11 @@ const products = [
         name: 'Coffee with cognac',
         description: 'Fragrant black coffee with cognac and whipped cream',
         price: '6.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Cinnamon', price: 0 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'tea',
@@ -102,6 +142,11 @@ const products = [
         name: 'Moroccan',
         description: 'Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint',
         price: '4.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Lemon', price: 0.5 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'tea',
@@ -109,6 +154,11 @@ const products = [
         name: 'Ginger',
         description: 'Original black tea with fresh ginger, lemon and honey',
         price: '5.00',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Lemon', price: 0.5 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'tea',
@@ -116,6 +166,11 @@ const products = [
         name: 'Cranberry',
         description: 'Invigorating black tea with cranberry and honey',
         price: '5.00',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Lemon', price: 0.5 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'tea',
@@ -123,6 +178,11 @@ const products = [
         name: 'Sea buckthorn',
         description: 'Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon',
         price: '5.50',
+        additives: [
+            { id: 1, name: 'Sugar', price: 0 },
+            { id: 2, name: 'Lemon', price: 0.5 },
+            { id: 3, name: 'Syrup', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -130,6 +190,11 @@ const products = [
         name: 'Marble cheesecake',
         description: 'Philadelphia cheese with lemon zest on a light sponge cake and red currant jam',
         price: '3.50',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -137,6 +202,11 @@ const products = [
         name: 'Red velvet',
         description: 'Layer cake with cream cheese frosting',
         price: '4.00',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -144,6 +214,11 @@ const products = [
         name: 'Cheesecakes',
         description: 'Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar',
         price: '4.50',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -151,6 +226,11 @@ const products = [
         name: 'Creme brulee',
         description: 'Delicate creamy dessert in a caramel basket with wild berries',
         price: '4.00',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -158,6 +238,11 @@ const products = [
         name: 'Pancakes',
         description: 'Tender pancakes with strawberry jam and fresh strawberries',
         price: '4.50',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -165,6 +250,11 @@ const products = [
         name: 'Honey cake',
         description: 'Classic honey cake with delicate custard',
         price: '4.50',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -172,6 +262,11 @@ const products = [
         name: 'Chocolate cake',
         description: 'Cake with hot chocolate filling and nuts with dried apricots',
         price: '5.50',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
     {
         category: 'dessert',
@@ -179,6 +274,11 @@ const products = [
         name: 'Black forest',
         description: 'A combination of thin sponge cake with cherry jam and light chocolate mousse',
         price: '6.50',
+        additives: [
+            { id: 1, name: 'Berries', price: 0.5 },
+            { id: 2, name: 'Nuts', price: 0.5 },
+            { id: 3, name: 'Jam', price: 0.5 },
+        ],
     },
 ];
 
@@ -224,7 +324,27 @@ const additiveInputs = modal.querySelectorAll('[data-additive]');
 let currentProduct = null;
 
 const SIZES_PRICE = { S: 0, M: 0.5, L: 1 };
-const ADDITIVES_PRICE = { 1: 0, 2: 0, 3: 0.5};
+
+const modalAdditives = document.getElementById('modal-additives');
+
+function renderAdditives(additives) {
+    if (!additives || additives.length === 0) {
+        modalAdditives.innerHTML = '';
+        return;
+    }
+
+    modalAdditives.innerHTML = additives.map((additive) => `
+        <label class="modal__additive">
+            <input
+                type="checkbox"
+                data-additive="${additive.id}"
+                data-price="${additive.price}"
+                value="${additive.id}"
+            />
+            <span>${additive.id}</span> ${additive.name}
+        </label>
+    `).join('');
+}
 
 function calculateTotal() {
     if (!currentProduct) return 0;
@@ -234,10 +354,8 @@ function calculateTotal() {
     const sizePrice = activeSize ? SIZES_PRICE[activeSize.dataset.size] : 0;
 
     let additivesPrice = 0;
-    additiveInputs.forEach((input) => {
-        if (input.checked) {
-            additivesPrice += ADDITIVES_PRICE[input.dataset.additive];
-        }
+    modal.querySelectorAll('[data-additive]:checked').forEach((input) => {
+        additivesPrice += parseFloat(input.dataset.price);
     });
 
     return basePrice + sizePrice + additivesPrice;
@@ -255,12 +373,10 @@ function openModal(product) {
     modalName.textContent = product.name;
     modalDescription.textContent = product.description;
 
+    renderAdditives(product.additives);
+
     sizeButtons.forEach((btn) => {
         btn.classList.toggle('modal__size--active', btn.dataset.size === 'S');
-    });
-
-    additiveInputs.forEach((input) => {
-        input.checked = false;
     });
 
     updateTotal();
